@@ -1,0 +1,26 @@
+{% extends 'main/layout.html'%}
+
+{% block content %}
+<h2>{{ post.title }}</h2>
+<img src="{{ post.image.url }}">
+<br>
+<p>{{ post.content }}</p>
+<p>By {{ post.author }} on {{ post.created_at }}</p>
+
+  {% if user.is_authenticated %}
+<h3>Comments</h3>
+<ul>
+    {% for comment in comments %}
+        <li>{{ comment.content }} by {{ comment.author }} on {{ comment.created_at }}</li>
+    {% endfor %}
+</ul>
+<h3>Add a Comment</h3>
+<form method="post">
+    {% csrf_token %}
+    {{ comment_form.as_p }}
+    <button type="submit" class="btn btn-primary">Submit Comment</button>
+</form>
+{% else %}
+<h3>Comments (<b><a href="{% url 'login' %}">{{ comments.count }}</a></b>)</h3>
+{% endif %}
+{% endblock %}
