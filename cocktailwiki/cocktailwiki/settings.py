@@ -28,7 +28,7 @@ SECRET_KEY = config('SECRET_KEY', default='django-insecure-&45x2@^xe=jq#m*h7lifn
 
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = False
 
 ALLOWED_HOSTS = ['cocktailwiki-60bfd89130f3.herokuapp.com', 'localhost', '127.0.0.1']
 
