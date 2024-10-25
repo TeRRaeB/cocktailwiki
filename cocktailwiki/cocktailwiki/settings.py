@@ -11,8 +11,9 @@ https://docs.djangoproject.com/en/5.1/ref/settings/
 """
 
 from pathlib import Path
-
 from decouple import config
+import django_heroku
+import dj_database_url
 from django.conf.global_settings import STATICFILES_DIRS
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
@@ -79,10 +80,7 @@ WSGI_APPLICATION = 'cocktailwiki.wsgi.application'
 # https://docs.djangoproject.com/en/5.1/ref/settings/#databases
 
 DATABASES = {
-    'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': BASE_DIR / "db.sqlite3",
-    }
+    'default': dj_database_url.config(default=config('DATABASE_URL'))
 }
 
 # Password validation
@@ -138,5 +136,4 @@ LOGOUT_REDIRECT_URL ='/'
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
-import django_heroku
 django_heroku.settings(locals())
