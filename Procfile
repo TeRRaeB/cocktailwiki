@@ -1,1 +1,1 @@
-web: gunicorn cocktailwiki.wsgi --log-file -
+web gunicorn cocktailwiki.wsgi:application --log-file -
