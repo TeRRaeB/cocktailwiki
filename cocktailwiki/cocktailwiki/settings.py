@@ -11,7 +11,7 @@ https://docs.djangoproject.com/en/5.1/ref/settings/
 """
 
 from pathlib import Path
-
+from decouple import config
 from django.conf.global_settings import STATICFILES_DIRS
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
@@ -27,7 +27,7 @@ SECRET_KEY = 'django-insecure-&45x2@^xe=jq#m*h7lifnp7_kwmlvldyt%_n=rr+2r0*q9kyu4
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['cocktailwiki-60bfd89130f3.herokuapp.com', 'localhost', '127.0.0.1']
 
 
 # Application definition
@@ -79,10 +79,9 @@ WSGI_APPLICATION = 'cocktailwiki.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': BASE_DIR / 'db.sqlite3',
+        'NAME': BASE_DIR / "db.sqlite3",
     }
 }
-
 
 # Password validation
 # https://docs.djangoproject.com/en/5.1/ref/settings/#auth-password-validators
@@ -128,9 +127,6 @@ MEDIA_URL = '/media/'
 
 MEDIA_ROOT = BASE_DIR / 'media'
 
-MIDDLEWARE = [
-    'whitenoise.middleware.WhiteNoiseMiddleware',
-]
 
 LOGIN_REDIRECT_URL = '/'
 LOGOUT_REDIRECT_URL ='/'
