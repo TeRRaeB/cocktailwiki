@@ -1,19 +1,28 @@
-{% extends 'main/layout.html'%}
+{% extends 'main/layout.html' %}
 
 {% block content %}
-<div class="container">
-    <h2>Register</h2>
-    <form method="post">
-        {% csrf_token %}
-        <table>
-        {{ form.as_table }}
-        {{ form.helptext }}
-        {{ form.non_field_errors }}
-                <tr>
-                    <td></td>
-        <td><button type="submit" class="btn btn-warning">Register</button></td>
-                </tr>
-             </table>
-    </form>
+<div class="container d-flex justify-content-center">
+    <div class="col-md-4 col-12">  <!-- Уменьшена ширина до col-md-4 -->
+        <h2 class="text-center">Register</h2>
+        <form method="post">
+            {% csrf_token %}
+            <div class="mb-3">
+                <label for="username" class="form-label">Username</label>
+                <input type="text" name="username" class="form-control" required>
+            </div>
+            <div class="mb-3">
+                <label for="password" class="form-label">Password</label>
+                <input type="password" name="password" class="form-control" required>
+            </div>
+            <div class="mb-3">
+                <label for="confirm_password" class="form-label">Confirm Password</label>
+                <input type="password" name="confirm_password" class="form-control" required>
+            </div>
+            <button type="submit" class="btn btn-warning w-100">Register</button>
+        </form>
+        {% if form.non_field_errors %}
+            <div class="alert alert-danger mt-3">{{ form.non_field_errors }}</div>
+        {% endif %}
+    </div>
 </div>
 {% endblock %}

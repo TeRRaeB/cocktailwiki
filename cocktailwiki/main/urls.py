@@ -13,4 +13,5 @@ urlpatterns = [
     path('post/new/', views.create_post, name='create_post'),
     path('moderator-panel/', views.moderator_panel, name='moderator_panel'),
     path('change-status/<int:post_id>/<int:status>/', views.change_status, name='change_status'),
+    path('delete-message/<int:message_id>/', views.delete_message, name='delete_message'),
 ]
