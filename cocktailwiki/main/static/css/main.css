@@ -11,6 +11,11 @@ body {
     height: 30px;
     margin: 0 10px;
 }
+.image-about {
+    display: inline-block;
+    border: 3px solid #ccc;
+    border-radius: 10px;
+    }
 
 footer {
     background-color: #f8f9fa;
