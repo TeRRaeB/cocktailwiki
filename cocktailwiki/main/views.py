@@ -64,9 +64,31 @@ def is_moderator(user):
 @login_required
 @user_passes_test(is_moderator)
 def moderator_panel(request):
-    posts = Post.objects.filter(status=0).order_by('created_at')
-    messages = Message.objects.all()
+    posts = Post.objects.all().order_by('created_at')
+    messages = Message.objects.all().order_by('created_at')
     return render(request, 'main/admin_panel/moderator_panel.html', {'posts': posts, 'messages': messages})
+
+
+@login_required
+@user_passes_test(is_moderator)
+def edit_post(request, post_id):
+    post = get_object_or_404(Post, id=post_id)
+    if request.method == 'POST':
+        form = PostForm(request.POST, request.FILES, instance=post)
+        if form.is_valid():
+            form.save()
+            return redirect('moderator_panel')
+    else:
+        form = PostForm(instance=post)
+    return render(request, 'main/admin_panel/edit_post.html', {'form': form, 'post': post})
+
+
+@login_required
+@user_passes_test(is_moderator)
+def delete_post(request, post_id):
+    post = get_object_or_404(Post, id=post_id)
+    post.delete()
+    return redirect('moderator_panel')
 
 
 @login_required

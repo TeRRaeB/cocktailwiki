@@ -15,6 +15,9 @@ class Post(models.Model):
     created_at = models.DateTimeField(auto_now_add=True)
     status = models.IntegerField(STATUS_POST, default=0)
 
+    def display_status(self):
+        return dict(self.STATUS_POST).get(self.status, 'Unknown')
+
     def __str__(self):
         return self.title
 
