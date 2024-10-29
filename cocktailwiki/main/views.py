@@ -23,7 +23,7 @@ def index(request):
 def load_more_posts(request):
     page_number = request.GET.get('page')
     posts = Post.objects.filter(status=1).order_by('created_at')
-    paginator = Paginator(posts, 3)
+    paginator = Paginator(posts, 6)
     page_obj = paginator.get_page(page_number)
     posts_html = render_to_string('main/posts_list.html', {'posts': page_obj})
     return JsonResponse({
