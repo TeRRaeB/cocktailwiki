@@ -105,13 +105,13 @@ The steps and results are as follows.
 
 #### <div id="testing_us">Testing User Stories </div>
 
-| User story                                                                          | User story testing |           
-|-------------------------------------------------------------------------------------| ------------- | 
-| As a User, I would like to familiarize myself with the information on the home page | On the main page, the user has access to posts, with the opportunity to get the full article.
-| As a User I would like to create an account so that I can book an appointment.      | After registering an account, the user independently fills in information to log in to the system in the future. The user can add their username and password during the registration process (Create). || 
-| As a registered user, I would like to create my own post.                           | On the post creation page, the user sees a form with three fields: Title, Post Body and the ability to upload a photo.|
-| As a registered user, I can go to the post I like and leave a comment.              | Under each post there is a simple comment form for registered users.|
-| As an admin, I have an additional admin panel where I have all the list of posts and messages via the "contact us" page.|  This page has buttons such as: publish, cancel, edit and delete a post. It is also possible to delete messages received from the “contact us” form.|
+| User story                                                                                                               | User story testing |           
+|--------------------------------------------------------------------------------------------------------------------------| ------------- | 
+| As a User, I would like to familiarize myself with the information on the home page                                      | On the main page, the user has access to posts, with the opportunity to get the full article.
+| As a User I would like to create an account | After registering an account, the user independently fills in information to log in to the system in the future. The user can add their username and password during the registration process (Create). || 
+| As a registered user, I would like to create my own post.                                                                | On the post creation page, the user sees a form with three fields: Title, Post Body and the ability to upload a photo.|
+| As a registered user, I can go to the post I like and leave a comment.                                                   | Under each post there is a simple comment form for registered users.|
+| As an admin, I have an additional admin panel where I have all the list of posts and messages via the "contact us" page. |  This page has buttons such as: publish, cancel, edit and delete a post. It is also possible to delete messages received from the “contact us” form.|
 
 #### <div id="testing_features">Testing Features</div>
 ##### Navigation links
