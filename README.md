@@ -165,10 +165,12 @@ Site pages have been tested using Lighthouse to identify performance and accessi
 ![](documentation/webaim_test.png)
 
 ### HTML W3 Validation 
+
 > Html valid
 ![](documentation/w3c_html.png)
 I use filters for urls
 ![](documentation/w3c_html_filters.png)
+> 
 ### CSS Validation  
 > Css valid
 ![](documentation/w3c_css.png)
