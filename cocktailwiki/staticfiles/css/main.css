@@ -1,6 +1,75 @@
 body {
-        background-color: #f8f9fa;
-        }
-        .navbar-brand {
-            font-weight: bold;
-        }
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+
+    font-family: "Lato", serif;
+    font-weight: 400;
+    font-style: normal;
+}
+
+.container {
+    flex: 1;
+}
+
+.vr {
+    border-left: 1px solid #ccc;
+    height: 30px;
+    margin: 0 10px;
+}
+
+.image-about {
+    display: inline-block;
+    border: 3px solid #ccc;
+    border-radius: 10px;
+}
+
+footer {
+    background-color: #f8f9fa;
+    padding: 20px 0;
+}
+
+.table {
+    width: 100%;
+}
+
+
+.title-page {
+    font-family: "Lato", serif;
+    font-weight: 700;
+    font-style: normal;
+}
+
+.table td,
+.table th {
+    vertical-align: middle;
+}
+
+.navbar {
+    margin-bottom: 2%
+}
+
+.navbar-brand img {
+    max-height: 40px;
+    margin-right: 10px;
+}
+
+.nav-link {
+    margin-right: 10px;
+}
+
+.card {
+    border: 1px solid #e0e0e0;
+    transition: transform 0.2s;
+}
+
+.card:hover {
+    transform: scale(1.05);
+}
+
+@media (max-width: 768px) {
+    .article-content {
+        font-size: 16px;
+        padding: 10px;
+    }
+}

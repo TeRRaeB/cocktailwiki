@@ -30,14 +30,16 @@ Cocktail Wiki is a site for lovers of cocktail culture. The main goal is to intr
 - As a regular user can see comments on his posts, as well as the responses of other users to his posts and comments.
 
 ### <div id="strategy">Strategy</div>
-The goal was to create the most simple and understandable website for the user. This enabled users to log in easily and quickly. Creating posts, comments and feedback forms. Also, the main highlight was the admin panel, where he can “approve” a post from a user, edit or delete it. (CRUD)
+The goal was to create the most simple and understandable website for the user. This enabled users to log in easily and quickly. Creating posts, comments and feedback forms. Also, the main highlight was the admin panel, where he can “approve” a post from a user, edit or delete it. (CRUD) 
+
+Posts also have a “status” field, by default it is “0 - created”, there is also a status of “1 - published” and “2 - rejected”. Based on this, the user creating a new publication will be able to see it only after the approval of the administrator.
 
 
 ### <div id="db">Database structure</div>
 
 ![](documentation/database_struc.png)
 
-When I decided on the idea of the project, I decided that there would be two tables: users and posts. In the future, I decided to add “comments” functionality and combine it with the two current tables. And the last modification was the “messages” table on the “Contact us” page.
+When I decided on the idea of the project, I decided that there would be two tables: users and posts. In the future, I decided to add “comments” functionality and combine it with the two current tables. And the last modification was the “messages” table on the “Contact us” page. 
 
 
 ### <div id="design">Design</div>
@@ -66,24 +68,10 @@ The colors are chosen so as not to overload the eyes with bright colors in the d
 > moderator-panel.html
 
 ![](documentation/admin_panel.png)
+ 
 
-> about.html
-
-![](documentation/about_page.png)
-
-
-> contact_us.html
-
-![](documentation/contact_us.png)
-
-> register.html
-
-![](documentation/register.png)
-
-> login.html
-
-![](documentation/logIn.png) 
-
+ 
+  
 ---
 
 ## <div id="testing">Testing</div>
@@ -177,14 +165,13 @@ Site pages have been tested using Lighthouse to identify performance and accessi
 ![](documentation/webaim_test.png)
 
 ### HTML W3 Validation 
-Result: no errors.
-
-### CSS Validation 
-Result: no errors.
-
-### Python Validation
-Result: no errors. 
- 
+> Html valid
+![](documentation/w3c_html.png)
+I use filters for urls
+![](documentation/w3c_html_filters.png)
+### CSS Validation  
+> Css valid
+![](documentation/w3c_css.png)
  
 ## <div id="features">Existing Features</div>
 ### Navigation 
@@ -223,7 +210,7 @@ A welcome message "Welcome, <username>!" appears for the logged in user.
   
 - **Heroku** used for hosting the project.
 - **GitHub** used to store the code for this project & for the projects Kanban board used to complete it.
-
+- **Figma** used for create Wireframes
 
 ## <div id="credits">Credits</div>
 - All images are made using AI [Microsoft Bing](https://www.bing.com/images/create).
